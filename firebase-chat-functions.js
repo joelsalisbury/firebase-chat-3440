@@ -1,4 +1,5 @@
 function saveMessageToFirebase(msg) {
+    msg.dateStamp = new Date().now();
     db.collection("messages").add(msg)
 }
 
